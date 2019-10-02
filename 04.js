@@ -22,7 +22,5 @@ function csvJSON(csv){
     var text = fs.readFileSync('data.csv','utf8')
     var toJSON = JSON.parse(csvJSON(text))
 
-    toJSON.sort(function(a, b){
-        return a.price - b.price;
-    });
+    toJSON.sort((a, b)=>a.price - b.price)
   console.log (toJSON)
